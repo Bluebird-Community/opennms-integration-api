@@ -5,7 +5,7 @@
     <packaging>pom</packaging>
     <version>2.0.0-SNAPSHOT</version>
     <name>OpenNMS Integration API :: Parent</name>
-    <url>https://github.com/OpenNMS/opennms-integration-api</url>
+    <url>https://github.com/bluebird-community/opennms-integration-api</url>
     <description>Integration and extension API for OpenNMS</description>
 
     <licenses>
@@ -16,18 +16,10 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/OpenNMS/opennms-integration-api</url>
-        <connection>scm:git:git@github.com:OpenNMS/opennms-integration-api.git</connection>
+        <url>https://github.com/bluebird-community/opennms-integration-api</url>
+        <connection>scm:git:git@github.com:bluebird-community/opennms-integration-api.git</connection>
         <tag>HEAD</tag>
     </scm>
-
-    <developers>
-        <developer>
-            <id>j-white</id>
-            <name>Jesse White</name>
-            <email>jesse@opennms.com</email>
-        </developer>
-    </developers>
 
     <modules>
         <module>api</module>
@@ -274,14 +266,16 @@
     </build>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>opennms-ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>opennms-ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>bluebird-nexus</id>
+            <name>Release</name>
+            <url>https://maven.bluebirdlabs.tech/repository/bluebird-public/</url>
         </repository>
+        <snapshotRepository>
+            <id>bluebird-nexus</id>
+            <name>Snapshot</name>
+            <url>https://maven.bluebirdlabs.tech/repository/bluebird-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <profiles>
